@@ -1,0 +1,28 @@
+-----Stats-----
+Num Left Clicks:      245
+Left Click avg Len:   101.192
+Left Click STD:       15.1086
+
+Num Right Clicks:     4
+Right Click avg Len:  105.5
+Right Click STD:      13.1244
+
+Num Double Clicks:    52
+Double Click avg Len: 232.481
+Double Click STD:     34.8615
+  Interval 1 Mean:    83.7692
+  Interval 2 Mean:    58.25
+  Interval 3 Mean:    90.4615
+  Interval 1 STD:     15.8934
+  Interval 2 STD:     28.1062
+  Interval 3 STD:     13.1082
+
+Average Speed:        0.308409
+Average Acceleration: 0.000152137
+Average Jerk:         1.27346e-007
+STD Speed:            0.27684
+STD Accel:            0.000201007
+STD Jerk:             2.66105e-007
+
+Num of Drag n Drop:   43
+
