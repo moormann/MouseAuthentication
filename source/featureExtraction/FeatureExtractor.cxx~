@@ -646,7 +646,7 @@ bool FeatureExtractor::isOutlier(TimeNode tn){
 
 
 
-void FeatureExtractor::ExtractFrom(std::string fName){
+void FeatureExtractor::ExtractFrom(std::string fName, double snR /*= 35*/, double dbR /*= 200*/){
   
   fileName = fName;       //Save name          
   inFile.open(("./raw/" + fileName).c_str());
@@ -655,23 +655,14 @@ void FeatureExtractor::ExtractFrom(std::string fName){
                                      //Optimizes a bit so it doesn't double look at records
   static int tlLClick = 0;           //Next two are same thing for left and right clicks
   static int tlRClick = 0;
-  
-
-  //CreateARF();
-  //cout << "What is R value of Single Length, Double Length, speed, accel, jerk (in that order): \n";
-  //cin  >> sngR >> dblR >> sR >> aR >> jR;
-
-  //For the class assume these values
-  sngR = 35;
-  dblR = 200;
-  sR   = 
-  aR   = 
-  jR   = 1;
-
+ 
+  sngR = snR;
+  dblR = dbR;
+ 
   inFile >> currentRec.time   >> currentRec.x      >> currentRec.y
          >> currentRec.lClick >> currentRec.rClick ;
 
-
+cout << sngR << " " << dblR << endl;
   ///First Loop to find Features that act as markers for other Extractions///
 
   while(inFile.good()){
@@ -709,7 +700,6 @@ void FeatureExtractor::ExtractFrom(std::string fName){
   inFile >> currentRec.time   >> currentRec.x      >> currentRec.y
          >> currentRec.lClick >> currentRec.rClick ;
   
-
   while(inFile.good()){
 
     ExtractSpeed( currentRec );

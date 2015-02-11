@@ -50,23 +50,49 @@ double compare(featFile out, featFile in, double m);
 void   partition(featFile &out, featFile &in, double perc);
 
 
-int main(){
+int main(int argc, char *argv[]){
 
 
  vector<std::string> fileList;
  ifstream nameFile("Names.txt");
  string temp;
  double mult, trainPerc;
- 
+ stringstream mStre, winStre; 
+ bool splitSameFile = false, splitDiffFile = false;
 
 
+ if(argc == 4){
 
- //Ask user for parameters
- cout << " What m would you like?" << endl;
- cin >> mult;
- cout << endl << " What percentage of the file should be used to train?"  << endl;
- cin >> trainPerc;
+   mStre   << argv[1];
+   winStre << argv[2];
 
+   mStre   >> mult;
+   winStre >> trainPerc;
+
+   if(argv[3] != "all"){
+     splitSameFile = true;
+     splitDiffFile = true;
+   }
+
+   if(argv[3] != "same"){
+     splitSameFile = true;
+     splitDiffFile = false;
+   }
+
+   if(argv[3] != "diff"){
+     splitSameFile = false;
+     splitDiffFile = true;
+   }
+
+ }else{
+
+   //Ask user for parameters
+   cout << " What m would you like?" << endl;
+   cin >> mult;
+   cout << endl << " What percentage of the file should be used to train?"  << endl;
+   cin >> trainPerc;
+
+ }
 
 
  featFile outerFile, innerFile;
@@ -99,11 +125,7 @@ int main(){
 
      ReadIn(innerFile, fileList[x]);
  
-     if( true ){
-      
-       matrix[i][x] = compare(outerFile, innerFile, mult);
-     
-     }else{
+    if( splitSameFile && splitDiffFile ){
 
        featFile tempOut = outerFile;
        featFile tempIn  = innerFile;
@@ -111,6 +133,20 @@ int main(){
        partition(tempOut, tempIn, trainPerc);
 
        matrix[i][x] = compare(tempOut, tempIn, mult);
+
+    }else if( splitSameFile && i == x ){
+
+       featFile tempOut = outerFile;
+       featFile tempIn  = innerFile;
+
+       partition(tempOut, tempIn, trainPerc);
+
+       matrix[i][x] = compare(tempOut, tempIn, mult); 
+     
+     }else{
+
+       matrix[i][x] = compare(outerFile, innerFile, mult);
+       
 
      }
    }

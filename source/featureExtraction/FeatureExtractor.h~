@@ -143,7 +143,7 @@ private:
   bool isOutlier(TimeNode tn);
 
 public:
-  void ExtractFrom(std::string fName, double snR = 35, double dbR = 200);
+  void FeatureExtractor::ExtractFrom(std::string fName, double snR = 35, double dbR = 200);
   //Reads in a file name, opens that file
   //extracts features in a loop
 };
