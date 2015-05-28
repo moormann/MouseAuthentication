@@ -1,0 +1,12 @@
+@relation MouseFeatures
+
+
+@attribute Type {Left, Right, Double}
+@attribute length real
+@attribute speed real
+@attribute accel real
+@attribute jerk real
+@attribute int1Len real
+@attribute int2Len real
+@attribute int3Len real
+@attribute File {

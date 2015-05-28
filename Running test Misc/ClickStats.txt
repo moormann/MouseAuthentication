@@ -1,0 +1,15 @@
+Num Files:         40
+
+Max Left Clicks:   716
+Min Left Clicks:   37
+Average:           444.2
+
+Max Right Clicks:  690
+Min Right Clicks:  0
+Average:           74.925
+
+Max Double Clicks: 1282
+Min Double Clicks: 1
+Average:           114.225
+
+Lowest Total Avg:  33.333333333333336 file: 49.mrf

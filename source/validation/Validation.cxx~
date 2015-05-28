@@ -156,7 +156,7 @@ int main(int argc, char *argv[]){
  //Output
  ofstream legitFile( "legitimate.txt" );
  ofstream imposterFile( "Imposter.txt"  );
- ofstream out("Chart.txt");
+ ofstream out( "Chart.txt");
 
  for(int i = 0; i < fileList.size(); i++){
    

@@ -1,28 +1,28 @@
 -----Stats-----
-Num Left Clicks:      308
-Left Click avg Len:   251.711
-Left Click STD:       662.237
+Num Left Clicks:      213
+Left Click avg Len:   104.319
+Left Click STD:       14.6471
 
-Num Right Clicks:     43
-Right Click avg Len:  364.953
-Right Click STD:      1118.61
+Num Right Clicks:     39
+Right Click avg Len:  115.974
+Right Click STD:      15.3748
 
-Num Double Clicks:    258
-Double Click avg Len: 391.322
-Double Click STD:     248.047
-  Interval 1 Mean:    119.857
-  Interval 2 Mean:    164.849
-  Interval 3 Mean:    106.616
-  Interval 1 STD:     133.209
-  Interval 2 STD:     104.044
-  Interval 3 STD:     73.9554
+Num Double Clicks:    84
+Double Click avg Len: 306.607
+Double Click STD:     38.9719
+  Interval 1 Mean:    93.0595
+  Interval 2 Mean:    121.298
+  Interval 3 Mean:    92.25
+  Interval 1 STD:     19.5085
+  Interval 2 STD:     41.3555
+  Interval 3 STD:     19.9964
 
-Average Speed:        6.98969e+229
-Average Acceleration: 5.91385e-005
-Average Jerk:         -1.#QNAN
-STD Speed:            1.#INF
-STD Accel:            0.000181161
-STD Jerk:             -1.#QNAN
+Average Speed:        0.0884423
+Average Acceleration: 7.81271e-005
+Average Jerk:         1.56902e-007
+STD Speed:            0.150337
+STD Accel:            0.000219589
+STD Jerk:             7.56895e-007
 
 Num of Drag n Drop:   40
 

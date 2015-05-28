@@ -319,7 +319,27 @@ void FeatureExtractor::CalcFeatures(){
 	  features.stdJerk = sqrt(temp / numEvents);
  
   
+ //Clean up if there arent any of one type of click
+ if(features.numLeftClicks == 0){
 
+   features.leftClickMean = 0;
+   features.leftClickSTD = 0;
+
+ }
+
+ if(features.numRightClicks == 0){
+
+   features.rightClickMean = 0;
+   features.rightClickSTD = 0;
+
+ }
+
+ if(features.numDoubleClicks == 0){
+
+   features.doubleClickMean = 0;
+   features.doubleClickSTD = 0;
+
+ }
 
   //Output the features into the mrf file
  
@@ -655,13 +675,16 @@ void FeatureExtractor::ExtractFrom(std::string fName, double snR /*= 35*/, doubl
                                      //Optimizes a bit so it doesn't double look at records
   static int tlLClick = 0;           //Next two are same thing for left and right clicks
   static int tlRClick = 0;
- 
+
+  //Put them in the global space 
   sngR = snR;
   dblR = dbR;
+  sR =
+  aR =
+  jR = 1;
  
   inFile >> currentRec.time   >> currentRec.x      >> currentRec.y
          >> currentRec.lClick >> currentRec.rClick ;
-
 
   ///First Loop to find Features that act as markers for other Extractions///
 

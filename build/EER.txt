@@ -1,0 +1,1 @@
+EER for 750M is: 0.101250, Threshold: 0.828050 and for extra is: 
